@@ -1,5 +1,6 @@
 gap> START_TEST( "stable-cat" );
 
+#@if IsPackageMarkedForLoading( "ComplexesCategories", ">= 2020.07.24" ) = true
 gap> A := LeftNakayamaAlgebra( Rationals, [ 3, 3, 3 ] );;
 gap> rep := CategoryOfQuiverRepresentations( A );;
 gap> stab := StableCategoryModuloProjectives( rep );;
@@ -15,5 +16,6 @@ gap> Ps := IndecProjLeftModules( A );;
 gap> Ps_st := List( Ps, P -> AsStableCategoryObject( P, lmod_st ) );;
 gap> ForAll( Ps_st, IsZero );
 true
+#@fi
 
 gap> STOP_TEST( "stable-cat" );

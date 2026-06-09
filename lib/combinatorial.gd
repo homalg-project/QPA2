@@ -4,6 +4,7 @@
 
 #! @Description
 #!  Category for unit forms.
+#! @Label
 DeclareCategory( "IsUnitForm", IsMatrix ); 
 DeclareCategoryFamily( "IsUnitForm" );
 DeclareCategoryCollections( "IsUnitForm" );
@@ -85,7 +86,7 @@ DeclareOperation( "EulerBilinearFormOfAlgebra", [ IsQuiverAlgebra ] );
 #!  to a bilinear form given by a matrix  <A>B</A>  in the coordinate  <A>i</A>.
 #! @Returns <C>IsVector</C>
 #! @Arguments B, i, z
-DeclareOperation( "ReflectionByBilinearForm", [ IsUnitForm, IS_INT, IsVector ] );
+DeclareOperation( "ReflectionByBilinearForm", [ IsUnitForm, IsInt, IsVector ] );
 
 #! @Description
 #!  This function returns true if the unit form is weakly non-negative and false
@@ -100,6 +101,7 @@ DeclareProperty( "IsWeaklyNonnegativeUnitForm",  IsUnitForm  );
 #!  when true is returned.
 #! @Returns <C>IsBool</C>
 #! @Arguments B
+#! @Label
 DeclareProperty( "IsWeaklyPositiveUnitForm",  IsUnitForm  );
 
 #

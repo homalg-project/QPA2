@@ -9,6 +9,7 @@
 #!  the category <C>IsLeftPath</C>, and
 #!  every path in a right-oriented quiver is in
 #!  the category <C>IsRightPath</C>.
+#! @Label
 DeclareCategory( "IsPath", IsMultiplicativeElement and IsObjectWithDirection );
 #!
 DeclareCategory( "IsLeftPath", IsPath );
@@ -19,6 +20,7 @@ DeclareCategory( "IsRightPath", IsPath );
 #! @Description
 #!  A **primitive path** is a path which can not be decomposed
 #!  in a nontrivial way, that is, a vertex or an arrow.
+#! @Label
 DeclareCategory( "IsPrimitivePath", IsPath );  # vertex or arrow
 
 #! @Description
@@ -33,10 +35,10 @@ DeclareCategory( "IsNontrivialPath", IsPath ); # not vertex
 #!  Any path is either a primitive path or a composite path.
 DeclareCategory( "IsCompositePath", IsNontrivialPath );
 
-#!
+#! @Label
 DeclareCategory( "IsQuiverVertex", IsPrimitivePath );
 
-#!
+#! @Label
 DeclareCategory( "IsArrow", IsNontrivialPath and IsPrimitivePath );
 
 #! @Description
@@ -44,12 +46,15 @@ DeclareCategory( "IsArrow", IsNontrivialPath and IsPrimitivePath );
 #!  Additionally, a left-oriented quiver is in the category
 #!  <Ref Filt="IsLeftQuiver"/>,
 #!  and a right-oriented quiver is in the category <C>IsRightQuiver</C>.
+#! @Label
 DeclareCategory( "IsQuiver", CategoryCollections( IsPath ) and IsObjectWithDirection );
 #! @Description
 #!  Category for left-oriented quivers.
+#! @Label
 DeclareCategory( "IsLeftQuiver", IsQuiver );
 #! @Description
 #!  Category for right-oriented quivers.
+#! @Label
 DeclareCategory( "IsRightQuiver", IsQuiver );
 
 
@@ -854,7 +859,6 @@ DeclareOperation( "QuiverHomomorphism",
 #!  where <C>n</C> is the number of vertices in <A>Q1</A>.
 #! @Arguments Q1, Q2, images
 #! @Returns <Ref Filt="IsQuiverHomomorphism"/>
-#! @Label
 DeclareOperation( "QuiverHomomorphism",
                   [ IsQuiver, IsQuiver, IsDenseList ] );
 

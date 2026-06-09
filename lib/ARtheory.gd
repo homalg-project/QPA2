@@ -10,7 +10,7 @@
 DeclareAttribute( "DTr", IsQuiverModule );
 #! @Returns <Ref Filt="IsQuiverModule"/>
 #! @Arguments M, n
-# DeclareOperation( "DTr", [ IsQuiverModule, IS_INT ] );
+# DeclareOperation( "DTr", [ IsQuiverModule, IsInt ] );
 #! @EndGroup
 
 #! @BeginGroup
@@ -21,7 +21,7 @@ DeclareAttribute( "DTr", IsQuiverModule );
 DeclareAttribute( "TrD", IsQuiverModule );
 #! @Returns <Ref Filt="IsQuiverModule"/>
 #! @Arguments M, n
-# DeclareOperation( "TrD", [ IsQuiverModule, IS_INT ] );
+# DeclareOperation( "TrD", [ IsQuiverModule, IsInt ] );
 #! @EndGroup
 
 #! @Section Almost split sequences and Auslander-Reiten quivers
@@ -61,6 +61,6 @@ DeclareOperation( "AlmostSplitSequence", [ IsQuiverModule, IsDirection ] );
 #!  and that the quotient of the path algebra is given over a finite field. 
 #! @Returns <C>IsList</C>
 #! @Arguments M, n
-DeclareOperation( "PredecessorsOfModule", [ IsQuiverModule, IS_INT ]) ;
+DeclareOperation( "PredecessorsOfModule", [ IsQuiverModule, IsInt ]) ;
 
 #

@@ -11,10 +11,12 @@ DeclareCategory( "IsFieldCategory", IsCapCategory );
 
 #! @Description
 #!  GAP category for objects in a <M>k</M>-category.
+#! @Label
 DeclareCategory( "IsFieldCategoryObject", IsCapCategoryObject );
 
 #! @Description
 #!  GAP category for morphisms in a  <M>k</M>-category.
+#! @Label
 DeclareCategory( "IsFieldCategoryMorphism", IsCapCategoryMorphism and IsQPAVector );
 
 #! @BeginGroup UnderlyingField

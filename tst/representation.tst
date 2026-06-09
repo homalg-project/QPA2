@@ -1,6 +1,7 @@
 gap> START_TEST( "representation" );
 
 # test ProjectiveLift
+#@if IsPackageMarkedForLoading( "ComplexesCategories", ">= 2020.07.24" ) = true
 gap> A := LeftNakayamaAlgebra( Rationals, [ 3, 2, 1 ] );;
 gap> R := QuiverRepresentation( A, [ 2, 2, 1 ], [ [ 1, 1, 0, 0 ], [ 1, 1 ] ] );;
 gap> f := TopProjection( R );;
@@ -44,5 +45,6 @@ gap> Ar_1 = Ar;
 true
 gap> Ar_2 = Ar;
 true
+#@fi
 
 gap> STOP_TEST( "representation" );

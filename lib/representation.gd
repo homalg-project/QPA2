@@ -4,10 +4,12 @@
 
 #! @Description
 #!  Category for elements of a quiver representation.
+#! @Label
 DeclareCategory( "IsQuiverRepresentationElement", IsVector );
 
 #! @Description
 #!  Category for quiver representations.
+#! @Label
 DeclareCategory( "IsQuiverRepresentation",
                  IsVectorSpace and
                  IsFieldCategoryObject and
@@ -326,7 +328,7 @@ DeclareOperation( "MapForAlgebraElement", [ IsQuiverRepresentation, IsQuiverAlge
 
 #! @Section Homomorphisms of representations
 
-#!
+#! @Label
 DeclareCategory( "IsQuiverRepresentationHomomorphism",
                  IsMapping and IsSPGeneralMapping and IsVectorSpaceHomomorphism
                  and IsFieldCategoryMorphism and IsQPAVector );
@@ -541,7 +543,7 @@ DeclareOperation( "AsFlatRepresentationElement", [ IsPosInt, IsQuiverRepresentat
 #! @Description
 #!  Returns the annihilator of a quiver representation in the algebra over which 
 #!  the representation <A>R</A> is defined.
-#! @Returns <Ref Filt="IsIdeal"/>
+#! @Returns <C>IsIdeal</C>
 #! @Arguments R
 DeclareAttribute( "AnnihilatorOfRepresentation", IsQuiverRepresentation );
 

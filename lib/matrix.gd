@@ -4,6 +4,7 @@
 
 #! @Description
 #!  Category for QPA's matrices.
+#! @Label
 DeclareCategory( "IsQPAMatrix", IsMatrixObj );
 
 #! @Arguments M
@@ -86,12 +87,14 @@ fi;
 #!  Returns the columns of the matrix <A>M</A>, as a list of lists.
 DeclareAttribute( "ColsOfMatrix", IsQPAMatrix );
 
+if false then
 #! @Arguments M
 #! @Description
 #!  Returns a matrix, which rows are a basis for the nullspace of the matrix
 #!  <A>M</A>. 
 #! @Returns IsQPAMatrix
 DeclareAttribute( "NullspaceMat", IsQPAMatrix );
+fi;
 
 #! @Arguments F, mat
 #! @Description

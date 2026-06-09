@@ -4,6 +4,7 @@
 
 #! @Description
 #!  Category of posets. 
+#! @Label
 DeclareCategory( "IsPoset", IsObject and IsAttributeStoringRep );
 
 #!

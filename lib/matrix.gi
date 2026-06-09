@@ -448,7 +448,7 @@ function( M, v )
 end 
 );
 
-InstallMethod( NullspaceMat, "for QPA matrix", [ IsQPAMatrix ],
+InstallOtherMethod( NullspaceMat, "for QPA matrix", [ IsQPAMatrix ],
 
 function( M )
   local   dim,  temp;

@@ -4,10 +4,12 @@
 
 #! @Description
 #!  Category for elements of modules over quiver algebras.
+#! @Label
 DeclareCategory( "IsQuiverModuleElement", IsAlgebraModuleElement and IsObjectWithSide );
 
 #! @Description
 #!  Category for modules over quiver algebras.
+#! @Label
 DeclareCategory( "IsQuiverModule",
                  IsVectorSpace and IsAlgebraModule and IsFieldCategoryObject
                  and IsObjectWithSide
@@ -15,6 +17,7 @@ DeclareCategory( "IsQuiverModule",
 
 #! @Description
 #!  Category for module categories.
+#! @Label
 DeclareCategory( "IsQuiverModuleCategory", IsFieldCategory and IsObjectWithSide );
 
 #! @Description
@@ -31,33 +34,39 @@ DeclareCategory( "IsQuiverBimoduleCategory", IsQuiverModuleCategory );
 
 #! @Description
 #!  Category for elements of left modules over quiver algebras.
+#! @Label
 DeclareCategory( "IsLeftQuiverModuleElement",
                  IsQuiverModuleElement and IsLeftAlgebraModuleElement );
 
 #! @Description
 #!  Category for left modules over quiver algebras.
+#! @Label
 DeclareCategory( "IsLeftQuiverModule",
                  IsQuiverModule and IsLeftAlgebraModule
                  and CategoryCollections( IsLeftQuiverModuleElement ) );
 
 #! @Description
 #!  Category for elements of right modules over quiver algebras.
+#! @Label
 DeclareCategory( "IsRightQuiverModuleElement",
                  IsQuiverModuleElement and IsRightAlgebraModuleElement );
 
 #! @Description
 #!  Category for right modules over quiver algebras.
+#! @Label
 DeclareCategory( "IsRightQuiverModule",
                  IsQuiverModule and IsLeftAlgebraModule
                  and CategoryCollections( IsRightQuiverModuleElement ) );
 
 #! @Description
 #!  Category for elements of bimodules over quiver algebras.
+#! @Label
 DeclareCategory( "IsQuiverBimoduleElement",
                  IsLeftQuiverModuleElement and IsRightQuiverModuleElement );
 
 #! @Description
 #!  Category for bimodules over quiver algebras.
+#! @Label
 DeclareCategory( "IsQuiverBimodule",
                  IsQuiverModule
                  and CategoryCollections( IsQuiverBimoduleElement ) );
@@ -126,7 +135,7 @@ DeclareOperation( "RightQuiverModule",
 #! @Description
 #!  Construct a right module over the quiver algebra <A>A</A>,
 #!  by specifying matrices for certain arrows.
-#!  This operation works like <Ref Oper="LeftQuiverModuleByArrows"
+#!  This operation works like <Ref Oper="LeftQuiverModule"
 #!    Label="for IsQuiverAlgebra, IsDenseList, IsDenseList, IsDenseList"/>,
 #!  except that it creates a right module.
 #! @Arguments A, dimensions, matrices
@@ -555,7 +564,7 @@ DeclareAttribute( "RepresentationOfModulesElementAsBimoduleElement", IsQuiverRep
 #! @Description
 #!  Returns the annihilator of a quiver module in the algebra over which 
 #!  the module <A>M</A> is defined.
-#! @Returns <Ref Filt="IsIdeal"/>
+#! @Returns <C>IsIdeal</C>
 #! @Arguments M
 DeclareAttribute( "AnnihilatorOfModule", IsQuiverModule );
 

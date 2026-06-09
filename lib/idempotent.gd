@@ -30,7 +30,7 @@ DeclareOperation( "SingularIdempotent", [ IsSimpleAlgebra ] );
 #! This function takes as an argument a finite dimensional  
 #! algebra  <A>A</A>  over a finite field and returns a complete set of 
 #! primitive idempotents  <M>\{ e_i \}</M>  such that  
-#!          <M>\[A \simeq  Ae_1 + ... + Ae_n.\]</M>
+#!          <Display>A \simeq  Ae_1 + \cdots + Ae_n.</Display>
 #! @Arguments A
 #! @Returns a list elements in an algebra
 DeclareOperation( "CompleteSetOfPrimitiveIdempotents", [ IsAlgebraWithOne ] );

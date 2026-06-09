@@ -4,6 +4,7 @@
 
 #! @Description
 #!  Category for the space of extensions. 
+#! @Label
 DeclareCategory( "IsExtSpace", IsQPAVectorSpace );
 
 #! @Description
@@ -21,6 +22,7 @@ DeclareOperation( "Ext", [ IsInt, IsFieldCategoryObject, IsFieldCategoryObject ]
 
 #! @Description
 #!  Category for extensions in a field category. 
+#! @Label
 DeclareCategory( "IsExtension", IsQPAVector );
 
 #! @Description
@@ -37,26 +39,26 @@ DeclareAttribute( "StartTerm", IsExtension );
 
 #! @Description
 #!  Returns the degree of an extension.
-#! @Returns <Ref Filt="IsPosInt"/>
+#! @Returns <C>IsPosInt</C>
 #! @Arguments ext
 DeclareAttribute( "ExtDegree", IsExtension );
 
 #! @Description
 #!  Returns an exact sequence of morphisms between objects 
 #!  representing the entered extension.
-#! @Returns <Ref Filt="IsList"/>
+#! @Returns <C>IsList</C>
 #! @Arguments ext
 DeclareAttribute( "AsExactSequence", IsExtension );
 
 #! @Description
 #!  Returns an extension as a cocycle.
-#! @Returns <Ref Filt="IsList"/>
+#! @Returns <C>IsList</C>
 #! @Arguments extension
 DeclareAttribute( "AsCycle", IsExtension );
 
 #! @Description
 #!  Returns the category in which the space of extensions lives.
-#! @Returns <Ref Filt="IsCapCategory"/>
+#! @Returns <Ref Filt="IsCapCategory" BookName="CAP"/>
 #! @Arguments ext
 DeclareAttribute( "CategoryOfExtSpace", IsExtSpace );
 
@@ -74,7 +76,7 @@ DeclareAttribute( "StartTerm", IsExtSpace );
 
 #! @Description
 #!  Returns the degree of a space of extensions.
-#! @Returns <Ref Filt="IsPosInt"/>
+#! @Returns <C>IsPosInt</C>
 #! @Arguments ext
 DeclareAttribute( "ExtDegree", IsExtSpace );
 

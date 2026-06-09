@@ -8,10 +8,12 @@
 
 #! @Description
 #!  Category for elements of quiver algebras.
+#! @Label
 DeclareCategory( "IsQuiverAlgebraElement", IsRingElementWithOne and IsObjectWithDirection and IsMultiplicativeElementWithInverse );
 
 #! @Description
 #!  Category for quiver algebras.
+#! @Label
 DeclareCategory( "IsQuiverAlgebra", IsAlgebraWithOne and CategoryCollections( IsQuiverAlgebraElement ) and IsObjectWithDirection );
 
 #!
@@ -22,6 +24,7 @@ DeclareCategory( "IsRightQuiverAlgebra", IsQuiverAlgebra );
 
 #! @Description
 #!  Category for ideals in quiver algebras.
+#! @Label
 DeclareCategory( "IsQuiverAlgebraIdeal",
                  IsRing and IsVectorSpace
                  and CategoryCollections( IsQuiverAlgebraElement )
@@ -29,18 +32,22 @@ DeclareCategory( "IsQuiverAlgebraIdeal",
 
 #! @Description
 #!  Category for two-sided ideals in quiver algebras.
+#! @Label
 DeclareCategory( "IsQuiverAlgebraTwoSidedIdeal", IsQuiverAlgebraIdeal );
 
 #! @Description
 #!  Category for (two-sided) ideals in path algebras.
+#! @Label
 DeclareCategory( "IsPathAlgebraIdeal", IsQuiverAlgebraTwoSidedIdeal );
 
 #! @Description
 #!  Category for elements of path algebras.
+#! @Label
 DeclareCategory( "IsPathAlgebraElement", IsQuiverAlgebraElement );
 
 #! @Description
 #!  Category for path algebras.
+#! @Label
 DeclareCategory( "IsPathAlgebra", IsQuiverAlgebra );
 
 #! @Description
@@ -388,8 +395,6 @@ DeclareOperation( "LaTeXStringForQPA", [ IsQuiverAlgebraElement ] );
 
 #! @InsertChunk Example_LaTeX_RightQuiver
 
-#! @Subsection Example
-
 #! Here is an example demonstrating use of the above functions:
 
 #! @BeginExampleSession
@@ -427,8 +432,6 @@ DeclareOperation( "LaTeXStringForQPA", [ IsQuiverAlgebraElement ] );
 #! <M>ca</M> in the expression for the element <C>f</C>,
 #! the coefficient of that path was zero since it disappeared
 #! in the canonical representative.
-
-#! @EndSubsection
 
 #! @Arguments e
 #! @Returns <C>true</C> or <C>false</C>
@@ -545,6 +548,7 @@ DeclareAttribute( "NonLeadingTerms", IsPathAlgebraElement );
 #!  The left quotient $L_{i,j}$ is accessible as <C>quotients[ i ][ j ][ 1 ]</C>,
 #!  and the right quotient $R_{i,j}$ as <C>quotients[ i ][ j ][ 2 ]</C>.
 DeclareOperation( "DivideByList", [ IsPathAlgebraElement, IsList ] );
+#! @InsertChunk Example_DivideByList
 
 #! @Arguments e, divisors
 #! @Returns <Ref Filt="IsPathAlgebraElement"/>
@@ -735,6 +739,7 @@ DeclareAttribute( "FlipTensorAlgebra", IsTensorProductOfAlgebras );
 
 #! @Description
 #!  Category for algebra homomorphisms between quiver algebras.
+#! @Label
 DeclareCategory( "IsQuiverAlgebraHomomorphism", IsAlgebraWithOneHomomorphism );
 
 #! @Arguments A, B, verteximages, arrowimages

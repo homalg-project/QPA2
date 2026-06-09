@@ -16,7 +16,15 @@ make_qpa_version_string := function()
   return str;
 end;
 
-latex_preamble := "\\usepackage{amsmath}\n";
+latex_preamble := Concatenation(
+  "\\usepackage{amsmath}\n",
+  "\\usepackage{mathrsfs}\n",
+  "\\DeclareMathOperator{\\Hom}{Hom}\n",
+  "\\DeclareMathOperator{\\Ext}{Ext}\n",
+  "\\DeclareMathOperator{\\add}{add}\n",
+  "\\DeclareMathOperator{\\rad}{rad}\n",
+  "\\newcommand{\\op}{\\mathrm{op}}\n"
+);
 
 AutoDoc( rec(
          gapdoc := rec( LaTeXOptions := rec( LateExtraPreamble := latex_preamble ) ),

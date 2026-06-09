@@ -9,16 +9,19 @@ DeclareCategory( "IsVectorSpaceCategory", IsFieldCategory );
 #!  Category for vector spaces.
 #!  Subcategory of the builtin GAP category <C>IsVector</C>,
 #!  and of the category <C>IsCapCategoryObject</C>.
+#! @Label
 DeclareCategory( "IsQPAVectorSpace", IsVectorSpace and IsFieldCategoryObject );
 
 DeclareCategory( "IsStandardVectorSpace", IsQPAVectorSpace );
 
 #! @Description
 #!  Category for zero vector spaces.
+#! @Label
 DeclareCategory( "IsZeroVectorSpace", IsStandardVectorSpace );
 
 #! @Description
 #!  Category for linear transformations.
+#! @Label
 DeclareCategory( "IsLinearTransformation",
                  IsFieldCategoryMorphism
                  and IsMapping

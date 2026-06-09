@@ -4,6 +4,7 @@
 
 #! @Description
 #!  Category for module homomorphisms.
+#! @Label
 DeclareCategory( "IsQuiverModuleHomomorphism",
                  IsMapping and IsSPGeneralMapping and IsVectorSpaceHomomorphism and
                  IsFieldCategoryMorphism );

@@ -8,7 +8,7 @@
 #!  <M>n-1</M>-th differential and takes the kernel.
 #! @Returns <Ref Filt="IsFieldCategoryObject"/>
 #! @Arguments R, n
-DeclareOperation( "NthSyzygy", [ IsFieldCategoryObject, IS_INT ] );
+DeclareOperation( "NthSyzygy", [ IsFieldCategoryObject, IsInt ] );
 
 #! @Description
 #! Returns the projective cover of the quiver representation  <A>R</A>. 
@@ -162,78 +162,78 @@ DeclareOperation( "TraceOfRepresentation", [ IsQuiverRepresentation, IsQuiverRep
 #!  Returns the dominant dimension of the representation  <A>R</A>  if it 
 #!  is less or equal to  <A>n</A>. If the representation  <A>R</A>  is injectiv 
 #!  and projective, then it returns infinity. Otherwise it returns false.
-#! @Returns <C>IS_INT</C> or <C>false</C>
+#! @Returns <C>IsInt</C> or <C>false</C>
 #! @Arguments R, n                                                              
-DeclareOperation( "DominantDimensionOfRepresentation", [ IsQuiverRepresentation, IS_INT ]);
+DeclareOperation( "DominantDimensionOfRepresentation", [ IsQuiverRepresentation, IsInt ]);
 
 #! @Description
 #!  Returns the dominant dimension of the object  <A>R</A>, if it has been computed. 
-#! @Returns <C>IS_INT</C>
+#! @Returns <C>IsInt</C>
 #! @Arguments R
 DeclareAttribute( "DominantDimension", IsFieldCategoryObject ); 
 
 #! @Description
 #!  Checks if the dominant dimension of  <A>A</A> is less or equal
 #!  to <A>n</A>, and returns the value if so. 
-#! @Returns <C>IS_INT</C>, <C>infty</C>, or <C>false</C>
+#! @Returns <C>IsInt</C>, <C>infty</C>, or <C>false</C>
 #! @Arguments A, n
-DeclareOperation( "DominantDimensionOfAlgebra", [ IsQuiverAlgebra, IS_INT ]);
+DeclareOperation( "DominantDimensionOfAlgebra", [ IsQuiverAlgebra, IsInt ]);
 
 #! @Description
 #!  Returns faithful dimension of the representation  <A>R</A>. 
-#! @Returns <C>IS_INT</C>
+#! @Returns <C>IsInt</C>
 #! @Arguments R
 DeclareAttribute( "FaithfulDimension", IsQuiverRepresentation );
 
 #! @Description
 #!  Checks if the global dimension of  <A>A</A> is less or equal
 #!  to <A>n</A>, and returns the value if so. 
-#! @Returns <C>IS_INT</C>, <C>infty</C>, or <C>false</C>
+#! @Returns <C>IsInt</C>, <C>infty</C>, or <C>false</C>
 #! @Arguments A, n
-DeclareOperation( "GlobalDimensionOfAlgebra", [ IsQuiverAlgebra, IS_INT ] );
+DeclareOperation( "GlobalDimensionOfAlgebra", [ IsQuiverAlgebra, IsInt ] );
 
 #! @Description
 #!  Returns the global dimension of <A>A</A>, if it has been computed. 
-#! @Returns <C>IS_INT</C>
+#! @Returns <C>IsInt</C>
 #! @Arguments A
 DeclareAttribute( "GlobalDimension", IsAlgebraWithOne );
 
 #! @Description
 #!  Checks if the Gorenstein dimension of  <A>A</A> is less or equal
 #!  to <A>n</A>, and returns the value if so. 
-#! @Returns <C>IS_INT</C>, <C>infty</C>, or <C>false</C>
+#! @Returns <C>IsInt</C>, <C>infty</C>, or <C>false</C>
 #! @Arguments A, n
-DeclareOperation( "GorensteinDimensionOfAlgebra", [ IsQuiverAlgebra, IS_INT ]);
+DeclareOperation( "GorensteinDimensionOfAlgebra", [ IsQuiverAlgebra, IsInt ]);
 
 #! @Description
 #!  Returns the Gorenstein dimension of the object  <A>R</A>, if it has been computed. 
-#! @Returns <C>IS_INT</C>
+#! @Returns <C>IsInt</C>
 #! @Arguments R
 DeclareAttribute( "GorensteinDimension", IsQuiverAlgebra );
 
 #! @Description
 #!  Checks if the injective dimension of the object  <A>R</A> is less or equal
 #!  to <A>n</A>, and returns the value if so. 
-#! @Returns <C>IS_INT</C> or <C>false</C>
+#! @Returns <C>IsInt</C> or <C>false</C>
 #! @Arguments R, n
-DeclareOperation( "InjDimensionOfObject", [ IsFieldCategoryObject, IS_INT ] );
+DeclareOperation( "InjDimensionOfObject", [ IsFieldCategoryObject, IsInt ] );
 
 #! @Description
 #!  Returns the injective dimension of the object  <A>R</A>, if it has been computed. 
-#! @Returns <C>IS_INT</C>
+#! @Returns <C>IsInt</C>
 #! @Arguments R
 DeclareAttribute( "InjDimension", IsFieldCategoryObject ); 
 
 #! @Description
 #!  Checks if the projective dimension of the object  <A>R</A> is less or equal
 #!  to <A>n</A>, and returns the value if so. 
-#! @Returns <C>IS_INT</C> or <C>false</C>
+#! @Returns <C>IsInt</C> or <C>false</C>
 #! @Arguments R, n
-DeclareOperation( "ProjDimensionOfObject", [ IsFieldCategoryObject, IS_INT ] );
+DeclareOperation( "ProjDimensionOfObject", [ IsFieldCategoryObject, IsInt ] );
 
 #! @Description
 #!  Returns the projective dimension of the object  <A>R</A>, if it has been computed. 
-#! @Returns <C>IS_INT</C>
+#! @Returns <C>IsInt</C>
 #! @Arguments R
 DeclareAttribute( "ProjDimension", IsFieldCategoryObject ); 
 
@@ -256,9 +256,9 @@ DeclareProperty( "IsExceptionalRepresentation", IsQuiverRepresentation );
 #!  This function tests if the object  <A>R</A>  is <M>\Omega</M>-periodic, that is,
 #!  if  <M>R \simeq \Omega^i( R )</M>  when  <M>i</M>  ranges over the set <M>\{1,2,...,n\}</M>.
 #!  Otherwise it returns false.
-#! @Returns <C>IS_INT</C> or <C>false</C>
+#! @Returns <C>IsInt</C> or <C>false</C>
 #! @Arguments R
-DeclareOperation( "IsOmegaPeriodic", [ IsFieldCategoryObject, IS_INT ] );
+DeclareOperation( "IsOmegaPeriodic", [ IsFieldCategoryObject, IsInt ] );
 
 #! @Description
 #! This function returns true if the entered object  <A>R</A>  is a rigid 
@@ -283,13 +283,13 @@ DeclareProperty( "IsInjectiveRepresentation",  IsQuiverRepresentation  );
 #!  Returns true if the object  <A>R</A>  is n-rigid, otherwise false. 
 #! @Returns <C>true</C> or <C>false</C>
 #! @Arguments R, n
-DeclareOperation( "IsN_RigidObject", [ IsFieldCategoryObject, IS_INT ] );
+DeclareOperation( "IsN_RigidObject", [ IsFieldCategoryObject, IsInt ] );
 
 #! @Description
 #!  Returns true if the object  <A>R</A>  is a <M>N</M>th-syzygy, otherwise false. 
 #! @Returns <C>true</C> or <C>false</C>
 #! @Arguments R, n
-DeclareOperation( "IsNthSyzygy", [ IsQuiverRepresentation, IS_INT ] );
+DeclareOperation( "IsNthSyzygy", [ IsQuiverRepresentation, IsInt ] );
 
 #! @BeginGroup
 #! @Description
@@ -328,7 +328,7 @@ DeclareOperation( "AllComplementsOfAlmostCompleteTiltingRepresentation", [ IsQui
 #!  elements consisting of the injective dimension of the tilting module and the
 #!  finite resolutions of all the indecomposable injective objects in the additive
 #!  closure of the cotilting representation.  Otherwise it returns <C>false</C>.
-#! @Returns <C>[ IS_INT, IsList ]</C> or <C>false</C>
+#! @Returns <C>[ IsInt, IsList ]</C> or <C>false</C>
 #! @Arguments R, n
 DeclareOperation( "CotiltingRepresentation", [ IsQuiverRepresentation, IsInt]);
 
@@ -363,7 +363,7 @@ DeclareOperation( "LeftMutationOfTiltingRepresentationComplement", [ IsQuiverRep
 #!  complete tilting/cotilting representation  <A>R</A>, assuming that  <A>R</A>
 #!  is an almost complete tilting representation.
 #!  representation  <A>R</A>.
-#! @Returns <C>IS_INT</C> 
+#! @Returns <C>IsInt</C> 
 #! @Arguments R
 DeclareOperation( "NumberOfComplementsOfAlmostCompleteTiltingRepresentation", [ IsQuiverRepresentation ] );
 #! @Arguments R
@@ -389,7 +389,7 @@ DeclareOperation( "RightMutationOfTiltingRepresentationComplement", [ IsQuiverRe
 #!  elements consisting of the projective dimension of the tilting module and the
 #!  finite coresolutions of all the indecomposable projective objects in the additive
 #!  closure of the tilting representation.  Otherwise it returns <C>false</C>.
-#! @Returns <C>[ IS_INT, IsList ]</C> or <C>false</C>
+#! @Returns <C>[ IsInt, IsList ]</C> or <C>false</C>
 #! @Arguments R, n
 DeclareOperation( "TiltingRepresentation", [ IsQuiverRepresentation, IsInt]);
 
